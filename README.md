@@ -82,7 +82,6 @@ This integration is currently distributed as private paid software.
 [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Azadglr&repository=ha-karaca-connect-unofficial&category=integration)
 
 1. Extract the ZIP file.  
-   ZIP dosyasını açın.
 
 2. Copy the `karaca_connect` folder into:   /config/custom_components/
 
@@ -115,6 +114,7 @@ Kurulumdan sonra cihaz sayfasında dört ana switch görünür:
 ## ⚙️ Configuration / Yapılandırma
 
 Bildirim ve konuşma sesi ayarları cihazın **Yapılandırma** bölümünde görünür.
+
 Notification and voice settings are shown under the device **Configuration** section.
 
 Available settings:
