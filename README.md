@@ -136,17 +136,17 @@ Bu proje işinize yarıyorsa geliştirmeyi destekleyebilirsiniz.
 
 If this project is useful for you, you can support development.
 
-- GitHub Sponsors: `https://github.com/sponsors/Azadglr`
-- ByNoGame: `https://donate.bynogame.com/azadglr`
-- Contact: `azadgulerr@gmail.com`
+- 💖 GitHub Sponsors: https://github.com/sponsors/Azadglr
+- 🎮 ByNoGame: https://donate.bynogame.com/azadglr
+- 📧 Contact: azadgulerr@gmail.com
 
 ---
 
 ## 🔖 Version / Sürüm
 
-```text
+``
 1.0.0
-```
+``
 
 ---
 
@@ -161,9 +161,9 @@ It may not be copied, redistributed, resold, published, modified, or shared with
 
 See:
 
-```text
+``
 PRIVATE_LICENSE.md
-```
+``
 
 ---
 
