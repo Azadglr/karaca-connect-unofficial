@@ -55,19 +55,15 @@ Unofficial Home Assistant integration for Karaca Connect devices.
 ## 📸 Screenshots / Ekran Görüntüleri
 
 ### Dashboard
-
 ![Dashboard](docs/images/dashboard.png)
 
 ### Device Page / Cihaz Sayfası
-
 ![Device Page](docs/images/device-page.png)
 
 ### Configuration / Yapılandırma
-
 ![Configuration](docs/images/config-page.png)
 
 ### Setup Flow / Kurulum Ekranı
-
 ![Setup Flow](docs/images/setup-flow.png)
 
 ---
