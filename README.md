@@ -80,6 +80,8 @@ Bu entegrasyon şu anda özel/ücretli olarak dağıtılmaktadır.
 
 ### Manual Installation / Manuel Kurulum
 
+[![Open your Home Assistant instance and open a repository inside HACS.](https://my.home-assistant.io/)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Azadglr&repository=ha-karaca-connect-unofficial&category=integration)
+
 1. Extract the ZIP file.  
    ZIP dosyasını açın.
 
