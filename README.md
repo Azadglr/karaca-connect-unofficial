@@ -1,9 +1,9 @@
 # Karaca Connect Unofficial
 
+Karaca Connect cihazları için resmi olmayan Home Assistant entegrasyonu.
+> Bu proje Karaca ile bağlantılı değildir, Karaca tarafından onaylanmamıştır veya desteklenmemektedir.
+
 Unofficial Home Assistant integration for Karaca Connect devices.
-
-Developed by **AzadGLR**.
-
 > This project is not affiliated with, endorsed by, or supported by Karaca.
 
 ---
@@ -74,36 +74,29 @@ Developed by **AzadGLR**.
 
 ## 📦 Installation / Kurulum
 
-This integration is currently distributed as private paid software.
-
 Bu entegrasyon şu anda özel/ücretli olarak dağıtılmaktadır.
+
+This integration is currently distributed as private paid software.
 
 ### Manual Installation / Manuel Kurulum
 
-[![Open your Home Assistant instance and open a repository inside HACS.](https://my.home-assistant.io/)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Azadglr&repository=ha-karaca-connect-unofficial&category=integration)
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Azadglr&repository=ha-karaca-connect-unofficial&category=integration)
 
 1. Extract the ZIP file.  
    ZIP dosyasını açın.
 
 2. Copy the `karaca_connect` folder into:
-
-```text
-/config/custom_components/
-```
+   /config/custom_components/
 
 3. Restart Home Assistant.
 
 4. Go to:
-
-```text
 Settings → Devices & Services → Add Integration
-```
 
 5. Search for:
 
-```text
 Karaca Connect Unofficial
-```
+
 
 6. Enter your Karaca Connect account information.
 
@@ -130,10 +123,9 @@ Aynı anda yalnızca bir mod aktif olabilir.
 
 ## ⚙️ Configuration / Yapılandırma
 
-Notification and voice settings are shown under the device **Configuration** section.
-
 Bildirim ve konuşma sesi ayarları cihazın **Yapılandırma** bölümünde görünür.
 
+Notification and voice settings are shown under the device **Configuration** section.
 Available settings:
 
 - Çay Demleme Bildirimi
@@ -149,14 +141,14 @@ Available settings:
 
 ## ❤️ Support / Destek
 
-If this project is useful for you, you can support development.
-
 Bu proje işinize yarıyorsa geliştirmeyi destekleyebilirsiniz.
+
+If this project is useful for you, you can support development.
 
 - GitHub Sponsors: `coming soon`
 - Buy Me a Coffee: `coming soon`
 - Shopier / Payment Link: `coming soon`
-- Contact: `coming soon`
+- Contact: `azadgulerr@gmail.com`
 
 ---
 
@@ -170,13 +162,12 @@ Bu proje işinize yarıyorsa geliştirmeyi destekleyebilirsiniz.
 
 ## 🔒 License / Lisans
 
-This software is private paid software.
-
 Bu yazılım özel/ücretli yazılımdır.
+İzinsiz kopyalanamaz, dağıtılamaz, satılamaz, yayınlanamaz, değiştirilemez veya paylaşılamaz.
 
+This software is private paid software.
 It may not be copied, redistributed, resold, published, modified, or shared without permission.
 
-İzinsiz kopyalanamaz, dağıtılamaz, satılamaz, yayınlanamaz, değiştirilemez veya paylaşılamaz.
 
 See:
 
@@ -188,18 +179,12 @@ PRIVATE_LICENSE.md
 
 ## ⚠️ Disclaimer / Uyarı
 
-This project is not affiliated with Karaca.
-
 Bu proje Karaca ile bağlantılı değildir.
-
-It is not developed, supported, or endorsed by Karaca.
-
 Karaca tarafından geliştirilmemiş, desteklenmemiş veya onaylanmamıştır.
-
-If the Karaca Connect cloud API changes, this integration may stop working or require updates.
-
 Karaca Connect bulut API’si değişirse entegrasyonun çalışması etkilenebilir.
-
-Use at your own risk.
-
 Kullanım sorumluluğu kullanıcıya aittir.
+
+This project is not affiliated with Karaca.
+It is not developed, supported, or endorsed by Karaca.
+If the Karaca Connect cloud API changes, this integration may stop working or require updates.
+Use at your own risk.
