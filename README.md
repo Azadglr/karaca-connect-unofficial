@@ -136,9 +136,8 @@ Bu proje işinize yarıyorsa geliştirmeyi destekleyebilirsiniz.
 
 If this project is useful for you, you can support development.
 
-- GitHub Sponsors: `coming soon`
-- Buy Me a Coffee: `coming soon`
-- Shopier / Payment Link: `coming soon`
+- GitHub Sponsors: `https://github.com/sponsors/Azadglr`
+- ByNoGame: `https://donate.bynogame.com/azadglr`
 - Contact: `azadgulerr@gmail.com`
 
 ---
