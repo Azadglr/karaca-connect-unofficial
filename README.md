@@ -75,7 +75,6 @@ Unofficial Home Assistant integration for Karaca Connect devices.
 ## 📦 Installation / Kurulum
 
 Bu entegrasyon şu anda özel/ücretli olarak dağıtılmaktadır.
-
 This integration is currently distributed as private paid software.
 
 ### Manual Installation / Manuel Kurulum
@@ -85,18 +84,13 @@ This integration is currently distributed as private paid software.
 1. Extract the ZIP file.  
    ZIP dosyasını açın.
 
-2. Copy the `karaca_connect` folder into:
-   /config/custom_components/
+2. Copy the `karaca_connect` folder into:   /config/custom_components/
 
 3. Restart Home Assistant.
 
-4. Go to:
-Settings → Devices & Services → Add Integration
+4. Go to:   Settings → Devices & Services → Add Integration
 
-5. Search for:
-
-Karaca Connect Unofficial
-
+5. Search for:   Karaca Connect Unofficial
 
 6. Enter your Karaca Connect account information.
 
@@ -115,17 +109,14 @@ Kurulumdan sonra cihaz sayfasında dört ana switch görünür:
 - Filtre Kahve / Filter Coffee
 - Mama Suyu / Baby Water
 
-Only one mode can be active at a time.
-
-Aynı anda yalnızca bir mod aktif olabilir.
 
 ---
 
 ## ⚙️ Configuration / Yapılandırma
 
 Bildirim ve konuşma sesi ayarları cihazın **Yapılandırma** bölümünde görünür.
-
 Notification and voice settings are shown under the device **Configuration** section.
+
 Available settings:
 
 - Çay Demleme Bildirimi
