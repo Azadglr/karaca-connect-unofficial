@@ -1,0 +1,47 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Karaca Connect Unofficial",
+        "description": "Karaca Connect hesabınızla giriş yapın. Integration by AzadGLR.",
+        "data": {
+          "email": "E-posta",
+          "password": "Şifre"
+        }
+      },
+      "select_device": {
+        "title": "Karaca Cihaz Seçimi",
+        "description": "Karaca Connect hesabınızda bulunan cihazlardan birini seçin.",
+        "data": {
+          "device_id": "Cihaz"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Karaca Connect hesabına bağlanılamadı. E-posta, şifre veya internet bağlantısını kontrol edin.",
+      "no_devices": "Bu Karaca Connect hesabında cihaz bulunamadı.",
+      "device_not_found": "Seçilen cihaz bulunamadı."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Karaca Çaycı Ayarları",
+        "description": "Bildirim ve ses ayarlarını buradan değiştirebilirsiniz.",
+        "data": {
+          "tea_notification": "Çay Demleme Bildirimi",
+          "filter_coffee_notification": "Filtre Kahve Bildirimi",
+          "freshness_notification": "Tazelik Bildirimi",
+          "power_off_notification": "Kapanma Bildirimi",
+          "no_water_notification": "Su Kalmadı Bildirimi",
+          "reminders_notification": "Anımsatıcı Bildirimler",
+          "voice": "Konuşma Sesi",
+          "cleaning_notification": "Temizlik Bildirimi"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Ayarlar alınamadı veya güncellenemedi."
+    }
+  }
+}

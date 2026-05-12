@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/
+
+.env
+secrets.yaml
+.storage/
+
+*.zip

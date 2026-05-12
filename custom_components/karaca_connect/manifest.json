@@ -1,0 +1,11 @@
+{
+  "domain": "karaca_connect",
+  "name": "Karaca Connect Unofficial",
+  "codeowners": ["@AzadGLR"],
+  "config_flow": true,
+  "documentation": "https://local/karaca-connect-unofficial",
+  "issue_tracker": "https://local/karaca-connect-unofficial/issues",
+  "iot_class": "cloud_polling",
+  "requirements": [],
+  "version": "1.0.0"
+}

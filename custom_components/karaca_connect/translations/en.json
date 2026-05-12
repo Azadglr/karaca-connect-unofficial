@@ -1,0 +1,47 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Karaca Connect by AzadGLR",
+        "description": "Sign in with your Karaca Connect account. Integration by AzadGLR.",
+        "data": {
+          "email": "Email address",
+          "password": "Password"
+        }
+      },
+      "select_device": {
+        "title": "Karaca Device Selection",
+        "description": "Select one of the devices found in your Karaca Connect account.",
+        "data": {
+          "device_id": "Device"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not connect to Karaca Connect. Check your email, password or internet connection.",
+      "no_devices": "No device was found in this Karaca Connect account.",
+      "device_not_found": "Selected device was not found."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Karaca Tea Maker Settings",
+        "description": "Change notification and voice settings here.",
+        "data": {
+          "tea_notification": "Tea Brewing Notification",
+          "filter_coffee_notification": "Filter Coffee Notification",
+          "freshness_notification": "Freshness Notification",
+          "power_off_notification": "Power Off Notification",
+          "no_water_notification": "No Water Notification",
+          "reminders_notification": "Reminder Notifications",
+          "voice": "Voice",
+          "cleaning_notification": "Cleaning Notification"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Settings could not be loaded or updated."
+    }
+  }
+}
