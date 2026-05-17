@@ -62,9 +62,7 @@ Unofficial Home Assistant integration for compatible Karaca Connect devices.
 
 ## 📦 Installation / Kurulum
 
-This integration is currently distributed as private paid software.
-
-Bu entegrasyon şu anda özel/ücretli olarak dağıtılmaktadır.
+[![Open your Home Assistant instance and open this repository in HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Azadglr&repository=karaca-connect-unofficial&category=integration)
 
 ### Manual Installation / Manuel Kurulum
 
@@ -91,7 +89,6 @@ Integration
 
 My Home Assistant link:
 
-[![Open your Home Assistant instance and open this repository in HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Azadglr&repository=karaca-connect-unofficial&category=integration)
 
 ## 🎛️ Controls / Kontroller
 
@@ -147,7 +144,6 @@ If this project is useful for you, you can support development.
 This software is private paid software.
 It may not be copied, redistributed, resold, published, modified, or shared without permission.
 
-Bu yazılım özel/ücretli yazılımdır.
 İzinsiz kopyalanamaz, dağıtılamaz, satılamaz, yayınlanamaz, değiştirilemez veya paylaşılamaz.
 
 See: [PRIVATE_LICENSE.md](PRIVATE_LICENSE.md)
