@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Karaca Connect Unofficial",
-        "description": "Karaca Connect hesabınızla giriş yapın. Integration by AzadGLR.",
+        "description": "Karaca Connect hesabınızla giriş yapın.",
         "data": {
           "email": "E-posta",
           "password": "Şifre"

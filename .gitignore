@@ -1,16 +1,27 @@
+# Python cache
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
+# OS / Editor files
 .DS_Store
 Thumbs.db
-
 .vscode/
 .idea/
 
+# Local customer / delivery files (NEVER COMMIT)
+*.zip
+*.rar
+*.7z
+oku.txt
+OKU.txt
+oku_first.txt
+OKU_FIRST.txt
+KURULUM.txt
+README_CUSTOMER.txt
+
+# Secrets / local HA files
 .env
 secrets.yaml
 .storage/
-
-*.zip

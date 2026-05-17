@@ -1,11 +1,14 @@
 {
   "domain": "karaca_connect",
   "name": "Karaca Connect Unofficial",
-  "codeowners": ["@Azadglr"],
-  "config_flow": true,
-  "documentation": "https://github.com/Azadglr/ha-karaca-connect-unofficial",
-  "issue_tracker": "https://github.com/Azadglr/ha-karaca-connect-unofficial/issues",
+  "version": "1.0.0",
+  "documentation": "https://github.com/Azadglr/karaca-connect-unofficial",
+  "issue_tracker": "https://github.com/Azadglr/karaca-connect-unofficial/issues",
+  "codeowners": [
+    "@Azadglr"
+  ],
   "iot_class": "cloud_polling",
+  "config_flow": true,
   "requirements": [],
-  "version": "1.0.0"
+  "dependencies": []
 }

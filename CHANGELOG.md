@@ -2,7 +2,7 @@
 
 ## 1.0.0
 
-Initial private release by AzadGLR.
+Initial stable release by AzadGLR.
 
 - Karaca Connect login
 - Automatic device discovery
@@ -10,7 +10,7 @@ Initial private release by AzadGLR.
 - Boiling water mode
 - Filter coffee mode
 - Baby water mode
-- Toggle switch behavior
+- Safe switch behavior
 - Turkish status sensor
 - Notification and voice settings
 - Local brand icon/logo support

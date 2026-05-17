@@ -1,12 +1,8 @@
 # Karaca Connect Unofficial
 
-Karaca Connect cihazları için resmi olmayan Home Assistant entegrasyonu.
-> Bu proje Karaca ile bağlantılı değildir, Karaca tarafından onaylanmamıştır veya desteklenmemektedir.
+Unofficial Home Assistant integration for compatible Karaca Connect devices.
 
-Unofficial Home Assistant integration for Karaca Connect devices.
 > This project is not affiliated with, endorsed by, or supported by Karaca.
-
----
 
 ## 🇹🇷 Türkçe
 
@@ -21,14 +17,13 @@ Unofficial Home Assistant integration for Karaca Connect devices.
 - Türkçe durum sensörü
 - Otomatik cihaz keşfi
 - Bildirim ve konuşma sesi ayarları
+- Güvenli switch davranışı
 - Home Assistant cihaz sayfasında temiz kontrol görünümü
 
 ### Test Edilen Cihaz
 
 - Karaca Çaysever Robotea Pro Connect 4in1
 - Device type: `robotea4in1`
-
----
 
 ## 🇬🇧 English
 
@@ -43,14 +38,13 @@ Unofficial Home Assistant integration for Karaca Connect devices.
 - Turkish status sensor
 - Automatic device discovery
 - Notification and voice settings
+- Safe switch behavior
 - Clean Home Assistant device page controls
 
 ### Tested Device
 
 - Karaca Çaysever Robotea Pro Connect 4in1
 - Device type: `robotea4in1`
-
----
 
 ## 📸 Screenshots / Ekran Görüntüleri
 
@@ -66,32 +60,40 @@ Unofficial Home Assistant integration for Karaca Connect devices.
 ### Setup Flow / Kurulum Ekranı
 ![Setup Flow](docs/images/setup-flow.png)
 
----
-
 ## 📦 Installation / Kurulum
 
-Bu entegrasyon şu anda özel/ücretli olarak dağıtılmaktadır.
 This integration is currently distributed as private paid software.
+
+Bu entegrasyon şu anda özel/ücretli olarak dağıtılmaktadır.
 
 ### Manual Installation / Manuel Kurulum
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Azadglr&repository=ha-karaca-connect-unofficial&category=integration)
+- Copy the `karaca_connect` folder into `/config/custom_components/`.
+- Restart Home Assistant.
+- Go to **Settings → Devices & Services → Add Integration**.
+- Search for **Karaca Connect Unofficial**.
+- Enter your Karaca Connect account information.
+- Select your device if multiple devices are found.
 
-1. Extract the ZIP file.  
+### HACS Custom Repository
 
-2. Copy the `karaca_connect` folder into:   /config/custom_components/
+If the repository is public or accessible to your GitHub account, add it as a custom repository in HACS:
 
-3. Restart Home Assistant.
+```text
+https://github.com/Azadglr/karaca-connect-unofficial
+```
 
-4. Go to:   Settings → Devices & Services → Add Integration
+Category:
 
-5. Search for:   Karaca Connect Unofficial
+```text
+Integration
+```
 
-6. Enter your Karaca Connect account information.
+My Home Assistant link:
 
-7. Select your device if multiple devices are found.
-
----
+```text
+https://my.home-assistant.io/redirect/hacs_repository/?owner=Azadglr&repository=karaca-connect-unofficial&category=integration
+```
 
 ## 🎛️ Controls / Kontroller
 
@@ -104,14 +106,18 @@ Kurulumdan sonra cihaz sayfasında dört ana switch görünür:
 - Filtre Kahve / Filter Coffee
 - Mama Suyu / Baby Water
 
+### Safe switch behavior / Güvenli switch davranışı
 
----
+- Switch **ON** starts the selected mode.
+- Switch **OFF** only sends standby if that exact mode is currently active.
+- If another mode is active, switch OFF does nothing.
+- Commands include cooldown protection to reduce accidental repeated API calls.
 
 ## ⚙️ Configuration / Yapılandırma
 
-Bildirim ve konuşma sesi ayarları cihazın **Yapılandırma** bölümünde görünür.
-
 Notification and voice settings are shown under the device **Configuration** section.
+
+Bildirim ve konuşma sesi ayarları cihazın **Yapılandırma** bölümünde görünür.
 
 Available settings:
 
@@ -124,8 +130,6 @@ Available settings:
 - Konuşma Sesi
 - Temizlik Bildirimi
 
----
-
 ## ❤️ Support / Destek
 
 Bu proje işinize yarıyorsa geliştirmeyi destekleyebilirsiniz.
@@ -136,41 +140,28 @@ If this project is useful for you, you can support development.
 - 🎮 ByNoGame: https://donate.bynogame.com/azadglr
 - 📧 Contact: azadgulerr@gmail.com
 
----
-
 ## 🔖 Version / Sürüm
 
-``
-1.0.0
-``
-
----
+`1.0.0`
 
 ## 🔒 License / Lisans
-
-Bu yazılım özel/ücretli yazılımdır.
-İzinsiz kopyalanamaz, dağıtılamaz, satılamaz, yayınlanamaz, değiştirilemez veya paylaşılamaz.
 
 This software is private paid software.
 It may not be copied, redistributed, resold, published, modified, or shared without permission.
 
+Bu yazılım özel/ücretli yazılımdır.
+İzinsiz kopyalanamaz, dağıtılamaz, satılamaz, yayınlanamaz, değiştirilemez veya paylaşılamaz.
 
-See:
-
-``
-PRIVATE_LICENSE.md
-``
-
----
+See: [PRIVATE_LICENSE.md](PRIVATE_LICENSE.md)
 
 ## ⚠️ Disclaimer / Uyarı
-
-Bu proje Karaca ile bağlantılı değildir.
-Karaca tarafından geliştirilmemiş, desteklenmemiş veya onaylanmamıştır.
-Karaca Connect bulut API’si değişirse entegrasyonun çalışması etkilenebilir.
-Kullanım sorumluluğu kullanıcıya aittir.
 
 This project is not affiliated with Karaca.
 It is not developed, supported, or endorsed by Karaca.
 If the Karaca Connect cloud API changes, this integration may stop working or require updates.
 Use at your own risk.
+
+Bu proje Karaca ile bağlantılı değildir.
+Karaca tarafından geliştirilmemiş, desteklenmemiş veya onaylanmamıştır.
+Karaca Connect bulut API’si değişirse entegrasyonun çalışması etkilenebilir.
+Kullanım sorumluluğu kullanıcıya aittir.
