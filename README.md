@@ -91,9 +91,7 @@ Integration
 
 My Home Assistant link:
 
-```text
-https://my.home-assistant.io/redirect/hacs_repository/?owner=Azadglr&repository=karaca-connect-unofficial&category=integration
-```
+[![Open your Home Assistant instance and open this repository in HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Azadglr&repository=karaca-connect-unofficial&category=integration)
 
 ## 🎛️ Controls / Kontroller
 
