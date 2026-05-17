@@ -87,9 +87,6 @@ Category:
 Integration
 ```
 
-My Home Assistant link:
-
-
 ## 🎛️ Controls / Kontroller
 
 After installation, the device page shows four main switches:
