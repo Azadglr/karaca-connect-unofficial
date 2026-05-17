@@ -138,12 +138,11 @@ If this project is useful for you, you can support development.
 
 ## 🔒 License / Lisans
 
-This software is private paid software.
 It may not be copied, redistributed, resold, published, modified, or shared without permission.
 
 İzinsiz kopyalanamaz, dağıtılamaz, satılamaz, yayınlanamaz, değiştirilemez veya paylaşılamaz.
 
-See: [PRIVATE_LICENSE.md](PRIVATE_LICENSE.md)
+See: [LICENSE](LICENSE)
 
 ## ⚠️ Disclaimer / Uyarı
 
