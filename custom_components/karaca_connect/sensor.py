@@ -15,6 +15,7 @@ class KaracaBaseSensor(CoordinatorEntity, SensorEntity):
     def __init__(self, coordinator, entry):
         super().__init__(coordinator)
         self.entry = entry
+
         self._attr_device_info = {
             "identifiers": {(DOMAIN, entry.entry_id)},
             "name": "Karaca Çaycı",
@@ -34,16 +35,21 @@ class KaracaStatusSensor(KaracaBaseSensor):
     def native_value(self):
         detail = self.coordinator.data.get("detail", {})
         step_view = detail.get("stepView") or {}
+
         mode = detail.get("mode")
         mode_name = detail.get("modeName")
         mode_state_label = detail.get("modeStateLabel")
         step_label = step_view.get("label")
+
         if step_label:
-            return step_label
+            return translate_state(step_label)
+
         if str(mode) == "1":
             return "Kapalı"
+
         if mode_state_label in (None, "", "off", "standby_off"):
             return translate_state(mode_name)
+
         return translate_state(mode_state_label)
 
     @property
@@ -51,6 +57,7 @@ class KaracaStatusSensor(KaracaBaseSensor):
         detail = self.coordinator.data.get("detail", {})
         meta = self.coordinator.data.get("meta", {})
         step_view = detail.get("stepView") or {}
+
         return {
             "author": "AzadGLR",
             "mode": detail.get("mode"),
