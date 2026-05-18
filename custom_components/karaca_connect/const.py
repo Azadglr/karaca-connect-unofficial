@@ -27,6 +27,16 @@ ACTIVE_MODE_IDS = {
     MODE_BABY_FOOD,
 }
 
+# Bildirim / ses ayar switchleri switch.py içinde kullanılıyor.
+SETTING_TEA_NOTIFICATION = 1
+SETTING_FILTER_COFFEE_NOTIFICATION = 2
+SETTING_FRESHNESS = 3
+SETTING_POWER_OFF = 4
+SETTING_NO_WATER = 5
+SETTING_REMINDERS = 6
+SETTING_VOICE = 7
+SETTING_CLEANING = 8
+
 MODE_TR = {
     "standby": "Kapalı",
     "off": "Kapalı",

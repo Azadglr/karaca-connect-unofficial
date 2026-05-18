@@ -1,6 +1,7 @@
 """Karaca Connect Unofficial switches."""
 
 import asyncio
+import logging
 import time
 
 from homeassistant.components.switch import SwitchEntity
@@ -24,6 +25,7 @@ from .const import (
     SETTING_VOICE,
 )
 
+_LOGGER = logging.getLogger(__name__)
 _last_command_time = 0
 
 MODE_SWITCHES = [
@@ -49,7 +51,11 @@ async def async_setup_entry(hass, entry, async_add_entities):
     data = hass.data[DOMAIN][entry.entry_id]
     api = data["api"]
     coordinator = data["coordinator"]
-    settings = await api.get_settings()
+    try:
+        settings = await api.get_settings()
+    except Exception as err:
+        _LOGGER.warning("Karaca settings could not be loaded: %s", err)
+        settings = []
     entities = [
         KaracaModeSwitch(api, coordinator, entry, unique_id, name, mode_id, icon)
         for unique_id, name, mode_id, icon in MODE_SWITCHES
