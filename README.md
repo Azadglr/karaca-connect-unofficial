@@ -50,6 +50,63 @@ Unofficial Home Assistant integration for compatible Karaca Connect devices.
 
 ### Dashboard
 ![Dashboard](docs/images/dashboard.png)
+<details>
+<summary>Örnek Dashboard YAML kodunu göster / gizle</summary>
+
+```yaml
+type: vertical-stack
+cards:
+  - type: entities
+    entities:
+      - entity: sensor.karaca_cayci_durum
+        name: Karaca Çaycı
+        icon: mdi:kettle-pour-over
+    show_header_toggle: false
+    state_color: false
+  - type: grid
+    columns: 2
+    square: false
+    cards:
+      - type: tile
+        entity: switch.karaca_cayci_cay_demleme
+        name: Çay Demleme
+        icon: mdi:tea
+        color: red
+        tap_action:
+          action: toggle
+        features_position: bottom
+        vertical: false
+      - type: tile
+        entity: switch.karaca_cayci_su_kaynatma
+        name: Su Kaynatma
+        icon: mdi:kettle
+        color: blue
+        tap_action:
+          action: toggle
+        features_position: bottom
+        vertical: false
+      - type: tile
+        entity: switch.karaca_cayci_filtre_kahve
+        name: Filtre Kahve
+        icon: mdi:coffee-maker
+        color: brown
+        tap_action:
+          action: toggle
+        features_position: bottom
+        vertical: false
+      - type: tile
+        entity: switch.karaca_cayci_mama_suyu
+        name: Mama Suyu
+        icon: mdi:baby-bottle
+        color: amber
+        tap_action:
+          action: toggle
+        features_position: bottom
+        vertical: false
+```
+
+</details>
+
 
 ### Device Page / Cihaz Sayfası
 ![Device Page](docs/images/device-page.png)
@@ -134,7 +191,7 @@ If this project is useful for you, you can support development.
 
 ## 🔖 Version / Sürüm
 
-`1.0.1`
+`1.0.2`
 
 ## 🔒 License / Lisans
 
