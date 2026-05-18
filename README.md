@@ -134,7 +134,7 @@ If this project is useful for you, you can support development.
 
 ## 🔖 Version / Sürüm
 
-`1.0.0`
+`1.0.1`
 
 ## 🔒 License / Lisans
 
