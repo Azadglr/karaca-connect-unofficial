@@ -25,3 +25,4 @@ README_CUSTOMER.txt
 .env
 secrets.yaml
 .storage/
+default/
