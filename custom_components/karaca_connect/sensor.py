@@ -52,8 +52,11 @@ class KaracaStatusSensor(KaracaBaseSensor):
         meta = self.coordinator.data.get("meta", {})
 
         return {
+            "mode": detail.get("mode"),
+            "mode_state": detail.get("modeState"),
             "mode_name": translate_state(detail.get("modeName")),
             "state_label": translate_state(detail.get("modeStateLabel")),
             "connected": meta.get("connected"),
+            "activated": meta.get("activated"),
             "updated_date": detail.get("updatedDate"),
         }
