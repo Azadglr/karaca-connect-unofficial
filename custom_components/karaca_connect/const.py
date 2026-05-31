@@ -41,26 +41,19 @@ MODE_TR = {
     "standby": "Kapalı",
     "off": "Kapalı",
     "standbyoff": "Kapalı",
+    "standby_off": "Kapalı",
 
     "boilingwater": "Su Kaynatma",
-    "waterboiling": "Su Kaynıyor",
     "waterboiled": "Su Kaynadı",
-    "waterready": "Su Kaynadı",
-    "suhazir": "Su Kaynadı",
-    "hazir": "Su Kaynadı",
 
     "teabrewing": "Çay Demleme",
-    "brewing": "Çay Demleniyor",
-    "brewedfresh": "Taze Çay",
-    "brewedstale": "Bayat Çay",
+    "teaready": "Çay Hazır",
 
     "filtercoffee": "Filtre Kahve",
-    "babyfood": "Mama Suyu",
+    "coffeeready": "Kahve Hazır",
 
-    "finished": "Tamamlandı",
-    "completed": "Tamamlandı",
-    "ready": "Hazır",
-    "error": "Hata",
+    "babyfood": "Mama Suyu",
+    "babywaterready": "Mama Suyu Hazır",
 }
 
 
@@ -68,5 +61,7 @@ def translate_state(value):
     if value is None:
         return None
 
-    key = str(value).replace("_", "").replace("-", "").replace(" ", "").lower()
-    return MODE_TR.get(key, value)
+    text = str(value).strip()
+    key = text.lower().replace(" ", "").replace("_", "")
+
+    return MODE_TR.get(key, text)
