@@ -1,3 +1,13 @@
+## v1.0.3
+
+Hotfix release.
+
+EN  
+Data updated.
+
+TR  
+Veriler güncellendi.
+
 # Changelog
 
 ## 1.0.2
