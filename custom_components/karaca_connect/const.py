@@ -52,6 +52,11 @@ MODE_TR = {
     "boilingwater": "Su kaynatılıyor",
     "boiling_water": "Su kaynatılıyor",
     "boiling": "Kaynatılıyor",
+    "waterboiled": "Su Kaynadı",
+    "water_boiled": "Su Kaynadı",
+    "boiledwater": "Su Kaynadı",
+    "boiled_water": "Su Kaynadı",
+    "boiled": "Kaynadı",
 
     # Çay demleme
     "brewing": "Çay demleniyor",
