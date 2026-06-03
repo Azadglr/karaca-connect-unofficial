@@ -47,10 +47,10 @@ MODE_TR = {
     "power_off": "Kapalı",
 
     # Su kaynatma
-    "waterboiling": "Su kaynatılıyor",
-    "water_boiling": "Su kaynatılıyor",
-    "boilingwater": "Su kaynatılıyor",
-    "boiling_water": "Su kaynatılıyor",
+    "waterboiling": "Su Kaynatılıyor",
+    "water_boiling": "Su Kaynatılıyor",
+    "boilingwater": "Su Kaynatılıyor",
+    "boiling_water": "Su Kaynatılıyor",
     "boiling": "Kaynatılıyor",
     "waterboiled": "Su Kaynadı",
     "water_boiled": "Su Kaynadı",
@@ -59,18 +59,18 @@ MODE_TR = {
     "boiled": "Kaynadı",
 
     # Çay demleme
-    "brewing": "Çay demleniyor",
-    "teabrewing": "Çay demleniyor",
-    "tea_brewing": "Çay demleniyor",
+    "brewing": "Çay Demleniyor",
+    "teabrewing": "Çay Demleniyor",
+    "tea_brewing": "Çay Demleniyor",
 
     # Çay hazır / taze
-    "brewedfresh": "Çay taze",
-    "brewed_fresh": "Çay taze",
+    "brewedfresh": "Taze Çay",
+    "brewed_fresh": "Taze Çay",
     "fresh": "Taze",
 
-    # Çay beklemiş / bayat
-    "brewedstale": "Çay beklemiş",
-    "brewed_stale": "Çay beklemiş",
+    # Beklemiş Çay / bayat
+    "brewedstale": "Beklemiş Çay",
+    "brewed_stale": "Beklemiş Çay",
     "stale": "Beklemiş",
 
     # Filtre kahve
