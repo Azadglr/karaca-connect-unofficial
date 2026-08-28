@@ -1,6 +1,6 @@
 # Karaca Connect Unofficial
 
-Unofficial Home Assistant integration for compatible Karaca Connect devices.
+Karaca Connect for Homeassistant. 
 
 > This project is not affiliated with, endorsed by, or supported by Karaca.
 
