@@ -1,214 +1,140 @@
-# Karaca Connect Unofficial
+<p align="center">
+  <img src="brand/logo.png" alt="Karaca Connect Unofficial" width="190">
+</p>
 
-Karaca Connect for Homeassistant. 
+<h1 align="center">Karaca Connect Unofficial</h1>
+<p align="center"><strong>Karaca Connect cihazları için bağımsız Home Assistant entegrasyonu.</strong></p>
+<p align="center">
+  <a href="docs/README.en.md">🇬🇧 English</a> ·
+  <a href="#kurulum">Kurulum</a> ·
+  <a href="#dashboard">Dashboard</a> ·
+  <a href="#sık-sorulan-sorular">SSS</a> ·
+  <a href="https://github.com/Azadglr/karaca-connect-unofficial/issues">Sorun bildir</a>
+</p>
+<p align="center">
+  <img alt="Sürüm 1.0.3" src="https://img.shields.io/badge/version-1.0.3-4C9A87?style=flat-square">
+  <img alt="Home Assistant 2025.3+" src="https://img.shields.io/badge/Home%20Assistant-2025.3%2B-41BDF5?style=flat-square">
+  <img alt="MIT Lisansı" src="https://img.shields.io/badge/license-MIT-68758C?style=flat-square">
+</p>
 
-> This project is not affiliated with, endorsed by, or supported by Karaca.
+> [!IMPORTANT]
+> **Bu resmî bir Karaca ürünü değildir.** Karaca tarafından geliştirilmez, desteklenmez veya onaylanmaz. Entegrasyon Karaca Connect bulut API'sine bağlıdır.
 
-## 🇹🇷 Türkçe
+## Genel bakış
 
-**Karaca Connect Unofficial**, Karaca Connect uygulamasıyla çalışan uyumlu cihazları Home Assistant üzerinden kontrol etmek için geliştirilmiş resmi olmayan bir Home Assistant entegrasyonudur.
+Karaca Connect Unofficial, uyumlu Karaca cihazlarını Home Assistant üzerinden kontrol etmeyi ve durumlarını izlemeyi sağlar. Cihaz keşfi ve hesapla giriş entegrasyon üzerinden gerçekleştirilir.
 
-### Özellikler
+| Kontrol | Durum ve ayarlar |
+| --- | --- |
+| ☕ **Çay Demleme** | Türkçe durum sensörü |
+| ♨️ **Su Kaynatma** | `Su Kaynatılıyor` / `Su Kaynadı` |
+| 🫖 **Filtre Kahve** | `Taze Çay` / `Beklemiş Çay` etiketleri |
+| 🍼 **Mama Suyu** | Bildirimler ve konuşma sesi |
 
-- Çay Demleme
-- Su Kaynatma
-- Filtre Kahve
-- Mama Suyu
-- Türkçe durum sensörü
-- Otomatik cihaz keşfi
-- Bildirim ve konuşma sesi ayarları
-- Güvenli switch davranışı
-- Home Assistant cihaz sayfasında temiz kontrol görünümü
+**Test edilen cihaz:** Karaca Çaysever Robotea Pro Connect 4in1 — cihaz türü `robotea4in1`. Diğer modellerin uyumluluğu henüz doğrulanmamıştır.
 
-### Test Edilen Cihaz
+## Dashboard
 
-- Karaca Çaysever Robotea Pro Connect 4in1
-- Device type: `robotea4in1`
+<p align="center">
+  <img src="docs/images/dashboard-modern.svg" width="620" alt="Kompakt Karaca Çaycı dashboard tasarım önizlemesi">
+</p>
+<p align="center"><sub>Şematik tasarım önizlemesi. Gerçek animasyon ve durum bilgisi Home Assistant üzerinde çalışır.</sub></p>
 
-## 🇬🇧 English
+Yeni kompakt görünüm, dört modu **tek dış çerçeve** içinde gösterir. Kart altlarında yinelenen “Çalışıyor/Kapalı” satırları yoktur. Her mod ayrı renkle vurgulanır; **su kaynatılırken** sıcak tonlu yumuşak animasyon, **su kaynadığında** sabit yeşil-turkuaz vurgu kullanılır. Hareketi azaltma ayarı dikkate alınır.
 
-**Karaca Connect Unofficial** is an unofficial Home Assistant integration for compatible Karaca Connect devices.
+**[Animasyonlu dashboard YAML dosyasını görüntüle ve kopyala](docs/dashboard-animated.yaml)**
 
-### Features
-
-- Tea Brewing
-- Boiling Water
-- Filter Coffee
-- Baby Water
-- Turkish status sensor
-- Automatic device discovery
-- Notification and voice settings
-- Safe switch behavior
-- Clean Home Assistant device page controls
-
-### Tested Device
-
-- Karaca Çaysever Robotea Pro Connect 4in1
-- Device type: `robotea4in1`
-
-## 📸 Screenshots / Ekran Görüntüleri
-
-### Dashboard
-![Dashboard](docs/images/dashboard.png)
 <details>
-<summary>Örnek Dashboard YAML kodunu göster / gizle</summary>
+<summary><strong>Dashboard'u nasıl eklerim?</strong></summary>
 
-```yaml
-type: vertical-stack
-cards:
-  - type: entities
-    entities:
-      - entity: sensor.karaca_cayci_durum
-        name: Karaca Çaycı
-        icon: mdi:kettle-pour-over
-    show_header_toggle: false
-    state_color: false
-  - type: grid
-    columns: 2
-    square: false
-    cards:
-      - type: tile
-        entity: switch.karaca_cayci_cay_demleme
-        name: Çay Demleme
-        icon: mdi:tea
-        color: red
-        tap_action:
-          action: toggle
-        features_position: bottom
-        vertical: false
-      - type: tile
-        entity: switch.karaca_cayci_su_kaynatma
-        name: Su Kaynatma
-        icon: mdi:kettle
-        color: blue
-        tap_action:
-          action: toggle
-        features_position: bottom
-        vertical: false
-      - type: tile
-        entity: switch.karaca_cayci_filtre_kahve
-        name: Filtre Kahve
-        icon: mdi:coffee-maker
-        color: brown
-        tap_action:
-          action: toggle
-        features_position: bottom
-        vertical: false
-      - type: tile
-        entity: switch.karaca_cayci_mama_suyu
-        name: Mama Suyu
-        icon: mdi:baby-bottle
-        color: amber
-        tap_action:
-          action: toggle
-        features_position: bottom
-        vertical: false
-```
+1. HACS üzerinden [custom:button-card](https://github.com/custom-cards/button-card) özel kartını yükleyin.
+2. Home Assistant'ta **Dashboard'u düzenle → Kart ekle → Manuel** yolunu açın.
+3. [`docs/dashboard-animated.yaml`](docs/dashboard-animated.yaml) dosyasının tamamını yapıştırın.
+4. Varlık kimlikleriniz farklıysa `sensor.karaca_cayci_durum` ile dört `switch.karaca_cayci_...` kimliğini değiştirin.
+
+Bu görsel kart **isteğe bağlıdır**. Entegrasyon standart Home Assistant kartlarıyla da çalışır. `stack-in-card` gerektirmez. Gerçek erişim kesintisi görsel olarak gizlenmez.
 
 </details>
 
+<details>
+<summary><strong>Diğer ekran görüntüleri: cihaz, ayarlar ve kurulum</strong></summary>
 
-### Device Page / Cihaz Sayfası
-![Device Page](docs/images/device-page.png)
+| Cihaz kontrolleri | Bildirim ve ses ayarları |
+| :---: | :---: |
+| <img src="docs/images/device-page.png" width="310" alt="Cihaz kontrolleri"> | <img src="docs/images/config-page.png" width="310" alt="Bildirim ayarları"> |
+| İlk kurulum | |
+| <img src="docs/images/setup-flow.png" width="310" alt="Kurulum ekranı"> | |
 
-### Configuration / Yapılandırma
-![Configuration](docs/images/config-page.png)
+<sub>Ekranlar Home Assistant sürümü ve kullanılan temaya göre farklı görünebilir.</sub>
 
-### Setup Flow / Kurulum Ekranı
-![Setup Flow](docs/images/setup-flow.png)
+</details>
 
-## 📦 Installation / Kurulum
+## Kurulum
 
-[![Open your Home Assistant instance and open this repository in HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Azadglr&repository=karaca-connect-unofficial&category=integration)
+### HACS ile kurulum (önerilen)
 
-### Manual Installation / Manuel Kurulum
+[![HACS deposunu aç](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Azadglr&repository=karaca-connect-unofficial&category=integration)
 
-- Copy the `karaca_connect` folder into `/config/custom_components/`.
-- Restart Home Assistant.
-- Go to **Settings → Devices & Services → Add Integration**.
-- Search for **Karaca Connect Unofficial**.
-- Enter your Karaca Connect account information.
-- Select your device if multiple devices are found.
+1. Home Assistant'ta **HACS → Özel depolar** bölümünü açın.
+2. Depo adresi olarak `https://github.com/Azadglr/karaca-connect-unofficial` yazın.
+3. Türü **Integration** seçin ve depoyu ekleyin.
+4. **Karaca Connect Unofficial** entegrasyonunu indirin ve Home Assistant'ı yeniden başlatın.
+5. **Ayarlar → Cihazlar ve Hizmetler → Entegrasyon ekle** bölümünden **Karaca Connect Unofficial** seçin.
+6. Karaca Connect hesabıyla giriş yapın; gerekiyorsa cihaz seçin.
 
-### HACS Custom Repository
+### Manuel kurulum
 
-If the repository is public or accessible to your GitHub account, add it as a custom repository in HACS:
+1. Depodaki [`custom_components/karaca_connect`](custom_components/karaca_connect) klasörünü Home Assistant'taki `/config/custom_components/` konumuna kopyalayın.
+2. Home Assistant'ı yeniden başlatın.
+3. **Ayarlar → Cihazlar ve Hizmetler → Entegrasyon ekle** üzerinden kurulumu tamamlayın.
 
-```text
-https://github.com/Azadglr/karaca-connect-unofficial
-```
+**Gereksinimler:** Depo bildirimine göre Home Assistant **2025.3.0+**; HACS ile kurulum için HACS **2.0.0+**. Karaca hesabı ve bulut erişimi gereklidir.
 
-Category:
+## Nasıl çalışır?
 
-```text
-Integration
-```
+| Konu | Açıklama |
+| --- | --- |
+| Veri yenileme | Karaca Connect bulutundan yaklaşık **10 saniyede bir** veri sorgulanır |
+| Güvenli mod kapatma | Mod yalnızca gerçekten etkinse kapatma isteği bekleme moduna geçirir |
+| Tekrar koruması | Mod değiştirme komutlarında **5 saniyelik** bekleme koruması vardır |
+| Türkçe durum | Su kaynatılıyor, su kaynadı, çay demleniyor, taze çay ve beklemiş çay gibi API durumları çevrilir |
+| Ayarlar | Bildirim, hatırlatıcı, konuşma sesi ve temizlik seçenekleri |
+| Bağlantı | Bulut yanıtı alınamazsa Home Assistant varlıkları geçici olarak `unavailable` olabilir |
 
-## 🎛️ Controls / Kontroller
+> [!NOTE]
+> `Taze Çay` ve `Beklemiş Çay` cihazdan gelen durumların çevirileridir. Entegrasyonda ayrı bir **1 saatlik çay sayacı** veya bu süreyi değiştirme kontrolü bulunmuyor.
 
-After installation, the device page shows four main switches:
+## Sık sorulan sorular
 
-Kurulumdan sonra cihaz sayfasında dört ana switch görünür:
+<details>
+<summary><strong>Su kaynadıktan sonra animasyon neden duruyor?</strong></summary>
 
-- Çay Demleme / Tea Brewing
-- Su Kaynatma / Boiling Water
-- Filtre Kahve / Filter Coffee
-- Mama Suyu / Baby Water
+Dashboard, cihazın `Su Kaynatılıyor` durumunda hafif animasyon gösterir. `Su Kaynadı` durumunda animasyon durur; yeşil-turkuaz görünüm sabit kalır.
 
-### Safe switch behavior / Güvenli switch davranışı
+</details>
 
-- Switch **ON** starts the selected mode.
-- Switch **OFF** only sends standby if that exact mode is currently active.
-- If another mode is active, switch OFF does nothing.
-- Commands include cooldown protection to reduce accidental repeated API calls.
+<details>
+<summary><strong>Bazen “Kullanılamıyor” veya “Bağlantı kontrolü” görünmesi normal mi?</strong></summary>
 
-## ⚙️ Configuration / Yapılandırma
+Durum sorgusunda geçici sorun yaşandığında Home Assistant cihazı `unavailable` olarak işaretleyebilir. Kesin neden loglarla araştırılmalıdır; cihaz arızası olduğu varsayılmamalıdır. İnceleme [Issue #1](https://github.com/Azadglr/karaca-connect-unofficial/issues/1) üzerinden takip ediliyor.
 
-Notification and voice settings are shown under the device **Configuration** section.
+</details>
 
-Bildirim ve konuşma sesi ayarları cihazın **Yapılandırma** bölümünde görünür.
+<details>
+<summary><strong>Animasyonlu kartı yüklemek zorunda mıyım?</strong></summary>
 
-Available settings:
+Hayır. Entegrasyonun dört kontrolü, standart Home Assistant kartlarıyla da kullanılabilir. Animasyonlu panel yalnızca örnek bir görsel düzenlemedir.
 
-- Çay Demleme Bildirimi
-- Filtre Kahve Bildirimi
-- Tazelik Bildirimi
-- Kapanma Bildirimi
-- Su Kalmadı Bildirimi
-- Anımsatıcı Bildirimler
-- Konuşma Sesi
-- Temizlik Bildirimi
+</details>
 
-## ❤️ Support / Destek
+## Destek ve katkı
 
-Bu proje işinize yarıyorsa geliştirmeyi destekleyebilirsiniz.
+Sorun bildirmek veya öneri paylaşmak için [GitHub Issues](https://github.com/Azadglr/karaca-connect-unofficial/issues) bölümünü kullanabilirsiniz. Hata kaydı paylaşırken **parola, erişim anahtarı veya cihaz kimliği** gibi hassas bilgileri çıkarın.
 
-If this project is useful for you, you can support development.
+Projeyi desteklemek için [GitHub Sponsors](https://github.com/sponsors/Azadglr) veya [ByNoGame](https://donate.bynogame.com/azadglr) bağlantılarını kullanabilirsiniz.
 
-- 💖 GitHub Sponsors: https://github.com/sponsors/Azadglr
-- 🎮 ByNoGame: https://donate.bynogame.com/azadglr
-- 📧 Contact: azadgulerr@gmail.com
+## Lisans ve sorumluluk
 
-## 🔖 Version / Sürüm
+Proje [MIT Lisansı](LICENSE) ile yayımlanır. Kullanım, değişiklik ve yeniden dağıtım koşulları için lisans dosyasına bakın. Bu bağımsız entegrasyonun çalışması Karaca bulut servisindeki değişikliklerden etkilenebilir.
 
-`1.0.3`
-
-## 🔒 License / Lisans
-
-It may not be copied, redistributed, resold, published, modified, or shared without permission.
-
-İzinsiz kopyalanamaz, dağıtılamaz, satılamaz, yayınlanamaz, değiştirilemez veya paylaşılamaz.
-
-See: [LICENSE](LICENSE)
-
-## ⚠️ Disclaimer / Uyarı
-
-This project is not affiliated with Karaca.
-It is not developed, supported, or endorsed by Karaca.
-If the Karaca Connect cloud API changes, this integration may stop working or require updates.
-Use at your own risk.
-
-Bu proje Karaca ile bağlantılı değildir.
-Karaca tarafından geliştirilmemiş, desteklenmemiş veya onaylanmamıştır.
-Karaca Connect bulut API’si değişirse entegrasyonun çalışması etkilenebilir.
-Kullanım sorumluluğu kullanıcıya aittir.
+<sub>Mevcut entegrasyon sürümü: <strong>1.0.3</strong>. Bu dokümantasyon güncellemesi yeni bir entegrasyon sürümü yayımlamaz.</sub>
