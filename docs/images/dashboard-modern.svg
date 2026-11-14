@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="250" viewBox="0 0 760 250" role="img" aria-label="Karaca Çaycı kompakt dashboard önizleme">
+  <rect width="760" height="250" rx="20" fill="#0D1014"/>
+  <rect x="12" y="12" width="736" height="226" rx="20" fill="#15191F" stroke="#343942" stroke-width="1.5"/>
+  <rect x="23" y="23" width="714" height="64" rx="12" fill="#24282F" stroke="#393F48"/>
+  <rect x="34" y="35" width="41" height="40" rx="10" fill="#4D4031"/>
+  <text x="54" y="62" font-size="22" text-anchor="middle" fill="#F1C18A" font-family="system-ui, Arial">♨</text>
+  <text x="89" y="62" fill="#F1F3F5" font-family="Arial,sans-serif" font-size="20" font-weight="600">Karaca Çaycı</text>
+  <rect x="591" y="38" width="132" height="33" rx="17" fill="#294A41"/>
+  <text x="657" y="59" font-size="15" fill="#A5EAD3" font-family="Arial,sans-serif" font-weight="600" text-anchor="middle">Su Kaynadı</text>
+  <rect x="23" y="97" width="350" height="61" rx="12" fill="#24282F" stroke="#363C45"/>
+  <rect x="387" y="97" width="350" height="61" rx="12" fill="#213B36" stroke="#42796C"/>
+  <rect x="23" y="168" width="350" height="61" rx="12" fill="#24282F" stroke="#363C45"/>
+  <rect x="387" y="168" width="350" height="61" rx="12" fill="#24282F" stroke="#363C45"/>
+  <g font-family="Arial,sans-serif" font-size="18" font-weight="600" fill="#E8ECF1">
+    <text x="85" y="134">Çay Demleme</text><text x="449" y="134">Su Kaynatma</text>
+    <text x="85" y="205">Filtre Kahve</text><text x="449" y="205">Mama Suyu</text>
+  </g>
+  <g>
+    <rect x="36" y="110" width="36" height="36" rx="9" fill="#3B4048"/>
+    <rect x="400" y="110" width="36" height="36" rx="9" fill="#355B51"/>
+    <rect x="36" y="181" width="36" height="36" rx="9" fill="#3B4048"/>
+    <rect x="400" y="181" width="36" height="36" rx="9" fill="#3B4048"/>
+    <g fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="#AEB5BE" d="M45 122 h18 l-2 13 h-13 z M50 119 h8"/>
+      <path stroke="#9CE6CE" d="M410 124 h14 l-2 13 h-10 z M414 120 q-3 -3 0 -5 M420 120 q-3 -3 0 -5"/>
+      <path stroke="#AEB5BE" d="M45 191 h18 v13 h-18 z M48 194 h12 M50 207 h8"/>
+      <path stroke="#AEB5BE" d="M409 191 h18 l-3 14 h-12 z M412 194 h12"/>
+    </g>
+  </g>
+</svg>
