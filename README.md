@@ -26,10 +26,10 @@ Karaca Connect Unofficial, uyumlu Karaca cihazlarını Home Assistant üzerinden
 
 | Kontrol | Durum ve ayarlar |
 | --- | --- |
-| ☕ **Çay Demleme** | Türkçe durum sensörü |
-| ♨️ **Su Kaynatma** | `Su Kaynatılıyor` / `Su Kaynadı` |
-| 🫖 **Filtre Kahve** | `Taze Çay` / `Beklemiş Çay` etiketleri |
-| 🍼 **Mama Suyu** | Bildirimler ve konuşma sesi |
+| ☕ **Çay Demleme** | `Çay Demleniyor`, `Taze Çay`, `Beklemiş Çay` |
+| ♨️ **Su Kaynatma** | `Su Kaynatılıyor`, `Su Kaynadı` |
+| 🫖 **Filtre Kahve** | `Kahve hazırlanıyor` |
+| 🍼 **Mama Suyu** | `Mama suyu` |
 
 **Test edilen cihaz:** Karaca Çaysever Robotea Pro Connect 4in1 — cihaz türü `robotea4in1`. Diğer modellerin uyumluluğu henüz doğrulanmamıştır.
 
