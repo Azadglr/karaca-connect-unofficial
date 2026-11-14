@@ -3,7 +3,7 @@
 DOMAIN = "karaca_connect"
 INTEGRATION_NAME = "Karaca Connect Unofficial"
 AUTHOR = "AzadGLR"
-VERSION = "1.0.3"
+VERSION = "1.0.4"
 
 BASE_URL = "https://karacaconnectapi.krc.com.tr"
 
