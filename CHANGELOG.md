@@ -1,93 +1,47 @@
-## v1.0.4 — 2026-11-14
+# Sürüm geçmişi / Changelog
 
-### Türkçe
-- Dashboard örneğinde yanlış anlaşılabilen “Kullanılamıyor” alt metni kaldırıldı; modların durumu renklerle belirtiliyor.
-- Su kaynatma sırasında animasyon, “Su Kaynadı” durumunda sabit renkli görünüm iyileştirildi.
-- Dashboard YAML örneği hem Türkçe hem İngilizce README içinde doğrudan kopyalanabilir hale getirildi.
-- Kurulum anlatımı sadeleştirildi; “Karaca Çaycı” cihaz adının otomatik oluştuğu açıklandı.
-- Entegrasyon sürüm numaraları 1.0.4 olarak güncellendi.
-- **Not:** Bu sürüm bulut bağlantı hatalarına yönelik API değişikliği içermez; arayüz ve dokümantasyon odaklıdır.
+## 1.0.4 — 14 Kasım 2026
 
-### English
-- Removed misleading “Unavailable” subtitles from the dashboard mode tiles.
-- Improved animated boiling and static water-ready styling.
-- Embedded the complete YAML example directly in both language guides.
-- Simplified setup steps and clarified the automatically assigned device name.
-- Updated integration version metadata to 1.0.4.
-- **Note:** This is a dashboard/documentation release, not a cloud API connectivity fix.
+**Türkçe**
+- Daha sade, renklerle durum gösteren Karaca Çaycı dashboard örneği.
+- Kaynatma sırasında animasyon, su kaynadığında sabit durum göstergesi.
+- Gereksiz kart alt yazıları kaldırıldı.
+- Daha anlaşılır kurulum yönergeleri ve ana sayfadan kopyalanabilen örnek kod.
+
+**English**
+- Cleaner dashboard example with distinct active-mode colors.
+- Gentle boiling animation and steady boiled-water indicator.
+- Removed redundant mode-card subtitles.
+- Simpler setup instructions and example code embedded on the project page.
+
+> Yeni panel isteğe bağlıdır; mevcut Home Assistant dashboard'unuzu otomatik değiştirmez.
+> The new dashboard is optional and does not automatically replace an existing Home Assistant dashboard.
 
 ---
 
-## v1.0.3
+## 1.0.3
 
-Hotfix release.
-
-EN  
-Data updated.
-
-TR  
-Veriler güncellendi.
-
-# Changelog
+- Küçük veri güncellemesi. / Minor data update.
 
 ## 1.0.2
 
-Hotfix release.
+- Entegrasyon kurulumunu etkileyen eksik ayarlar düzeltildi.
+- Bildirim ayarlarının okunamadığı durumlar için daha güvenli yükleme eklendi.
 
-### EN
-
-- Fixed missing settings constants that could cause the integration setup to fail.
-- Added safer settings loading so notification settings cannot break integration setup.
-- Version updated to 1.0.2.
-
-### TR
-
-- Entegrasyon kurulumunun hata vermesine neden olabilen eksik ayar sabitleri düzeltildi.
-- Bildirim ayarları yüklenemese bile entegrasyonun çökmesini engelleyen güvenli yükleme eklendi.
-- Sürüm 1.0.2 olarak güncellendi.
+- Fixed missing settings constants that could prevent integration setup.
+- Improved safe loading when notification settings cannot be retrieved.
 
 ## 1.0.1
 
-Update release.
+- Veri yenileme aralığı 10 saniyeye ayarlandı.
+- Su hazır durumu `Su Kaynadı` olarak çevrildi.
+- Yapılandırma akışı sorunlarına yol açan seçenek akışı kaldırıldı.
 
-### EN
-
-- Data refresh interval changed to 10 seconds.
-- Water ready status now shows as "Su Kaynadı".
-- Integration options flow removed to prevent configuration flow errors.
-
-### TR
-
-- Veri yenileme aralığı 10 saniyeye değiştirildi.
-- Su hazır durumu artık "Su Kaynadı" olarak gösteriliyor.
-- Yapılandırma akışı hatalarını önlemek için entegrasyon seçenekleri akışı kaldırıldı.
+- Set the polling interval to 10 seconds.
+- Translated the water-ready state to `Su Kaynadı`.
+- Removed the options flow to avoid configuration errors.
 
 ## 1.0.0
 
-Initial stable release by AzadGLR.
-
-### EN
-
-- Karaca Connect login.
-- Automatic device discovery.
-- Tea brewing mode.
-- Boiling water mode.
-- Filter coffee mode.
-- Baby water mode.
-- Safe switch behavior.
-- Turkish status sensor.
-- Notification and voice settings.
-- Local brand icon/logo support.
-
-### TR
-
-- Karaca Connect hesabı ile giriş.
-- Otomatik cihaz keşfi.
-- Çay demleme modu.
-- Su kaynatma modu.
-- Filtre kahve modu.
-- Mama suyu modu.
-- Güvenli switch davranışı.
-- Türkçe durum sensörü.
-- Bildirim ve konuşma sesi ayarları.
-- Yerel marka icon/logo desteği.
+- İlk sürüm: cihaz keşfi, dört çalışma modu, Türkçe durum sensörü, bildirim ve ses ayarları.
+- Initial release: device discovery, four operation modes, Turkish status sensor, notification and voice settings.
